@@ -73,7 +73,7 @@ class _$MatrixClientService extends MatrixClientService {
   }
 
   Future<Response> sendReadMarkers(String roomId, ReadMarkers readMarkers) {
-    final $url = '_matrix/client/r0/rooms/{:roomId}/read_markers';
+    final $url = '_matrix/client/r0/rooms/${roomId}/read_markers';
     final $body = readMarkers;
     final $request = Request('POST', $url, client.baseUrl, body: $body);
     return client.send<dynamic, dynamic>($request);
