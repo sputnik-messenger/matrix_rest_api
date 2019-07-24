@@ -10,7 +10,7 @@ class ImageMessage {
   final String body;
   final ImageInfo info;
   final String msgtype;
-  final url;
+  final String url;
 
   ImageMessage({
     this.body,

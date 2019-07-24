@@ -6,6 +6,7 @@ export 'event/event.dart';
 export 'event/read_markers.dart';
 export 'event/room_event.dart';
 export 'event/put_event_response.dart';
+export 'event/redact_request.dart';
 export 'event/content/m_room/name/name_content.dart';
 export 'event/content/m_room/topic/topic_content.dart';
 export 'event/content/m_room/aliases/aliases_content.dart';

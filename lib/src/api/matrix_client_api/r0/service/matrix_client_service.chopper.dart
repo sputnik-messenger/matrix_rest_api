@@ -78,4 +78,13 @@ class _$MatrixClientService extends MatrixClientService {
     final $request = Request('POST', $url, client.baseUrl, body: $body);
     return client.send<dynamic, dynamic>($request);
   }
+
+  Future<Response<PutEventResponse>> redactEvent(String roomId, String eventId,
+      String transactionId, RedactRequest request) {
+    final $url =
+        '_matrix/client/r0/rooms/${roomId}/redact/${eventId}/${transactionId}';
+    final $body = request;
+    final $request = Request('PUT', $url, client.baseUrl, body: $body);
+    return client.send<PutEventResponse, PutEventResponse>($request);
+  }
 }

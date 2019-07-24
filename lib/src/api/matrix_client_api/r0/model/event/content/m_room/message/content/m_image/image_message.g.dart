@@ -13,7 +13,7 @@ ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) {
           ? null
           : ImageInfo.fromJson(json['info'] as Map<String, dynamic>),
       msgtype: json['msgtype'] as String,
-      url: json['url']);
+      url: json['url'] as String);
 }
 
 Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) =>

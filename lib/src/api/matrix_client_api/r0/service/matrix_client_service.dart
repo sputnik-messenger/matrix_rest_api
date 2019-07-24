@@ -50,4 +50,12 @@ abstract class MatrixClientService extends ChopperService {
 
   @Post(path: 'r0/rooms/{roomId}/read_markers')
   Future<Response> sendReadMarkers(@Path() String roomId, @Body() ReadMarkers readMarkers);
+
+  @Put(path: 'r0/rooms/{roomId}/redact/{eventId}/{transactionId}')
+  Future<Response<PutEventResponse>> redactEvent(
+    @Path() String roomId,
+    @Path() String eventId,
+    @Path() String transactionId,
+    @Body() RedactRequest request,
+  );
 }
