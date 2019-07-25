@@ -32,6 +32,7 @@ export 'event/content/m_room/message/content/m_emote/emote_message.dart';
 export 'event/content/m_room/message/content/m_image/image_info.dart';
 export 'event/content/m_room/message/content/m_image/thumbnail_info.dart';
 export 'event/content/m_room/message/content/m_image/image_message.dart';
+export 'event/content/m_room/m_sticker/sticker_message.dart';
 export 'event/content/m_room/encryption/encryption_content.dart';
 export 'event/content/m_room/canonical_alias/canonical_alias_content.dart';
 export 'event/content/relates_to/relates_to.dart';
