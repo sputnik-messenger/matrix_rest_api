@@ -4,10 +4,10 @@ part 'thumbnail_info.g.dart';
 
 @JsonSerializable(nullable: true, )
 class ThumbnailInfo {
-  final int h;
-  final int w;
+  final double h;
+  final double w;
   final String mimetype;
-  final int size;
+  final double size;
 
   ThumbnailInfo({
     this.h,
