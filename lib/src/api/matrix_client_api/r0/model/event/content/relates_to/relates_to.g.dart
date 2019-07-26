@@ -13,8 +13,17 @@ RelatesTo _$RelatesToFromJson(Map<String, dynamic> json) {
       key: json['key'] as String);
 }
 
-Map<String, dynamic> _$RelatesToToJson(RelatesTo instance) => <String, dynamic>{
-      'rel_type': instance.rel_type,
-      'event_id': instance.event_id,
-      'key': instance.key
-    };
+Map<String, dynamic> _$RelatesToToJson(RelatesTo instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('rel_type', instance.rel_type);
+  writeNotNull('event_id', instance.event_id);
+  writeNotNull('key', instance.key);
+  return val;
+}

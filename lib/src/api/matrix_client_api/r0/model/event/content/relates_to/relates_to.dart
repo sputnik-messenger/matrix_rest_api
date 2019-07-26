@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'relates_to.g.dart';
 
-@JsonSerializable(nullable: true)
+@JsonSerializable(nullable: true, includeIfNull: false)
 class RelatesTo {
   final String rel_type;
   final String event_id;
