@@ -22,6 +22,7 @@ export 'event/content/m_room/member/member_content.dart';
 export 'event/content/m_room/member/signed.dart';
 export 'event/content/m_room/member/invite.dart';
 export 'event/content/m_room/join_rule/join_rule_content.dart';
+export 'event/content/m_room/message/content/rich_reply/rich_reply.dart';
 export 'event/content/m_room/tombstone/tombstone_content.dart';
 export 'event/content/m_room/message/content/m_notice/notice_message.dart';
 export 'event/content/m_room/message/content/m_audio/audio_info.dart';
