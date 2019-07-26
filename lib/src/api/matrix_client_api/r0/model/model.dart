@@ -37,6 +37,7 @@ export 'event/content/m_room/m_sticker/sticker_message.dart';
 export 'event/content/m_room/encryption/encryption_content.dart';
 export 'event/content/m_room/canonical_alias/canonical_alias_content.dart';
 export 'event/content/relates_to/relates_to.dart';
+export 'event/content/relates_to/in_reply_to.dart';
 export 'media/content_uri_response.dart';
 export 'query/room_messages/room_messages_response.dart';
 export 'sync/sync_response.dart';
