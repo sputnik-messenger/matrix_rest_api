@@ -8,6 +8,8 @@ class LoginResponse {
   final String access_token;
   final String user_id;
   final String device_id;
+
+  @JsonKey(nullable: true)
   final WellKnownClient well_known;
 
   LoginResponse({
@@ -17,8 +19,7 @@ class LoginResponse {
     this.well_known,
   });
 
-  factory LoginResponse.fromJson(Map<String, dynamic> json) =>
-      _$LoginResponseFromJson(json);
+  factory LoginResponse.fromJson(Map<String, dynamic> json) => _$LoginResponseFromJson(json);
 
   Map<String, dynamic> toJson() => _$LoginResponseToJson(this);
 }

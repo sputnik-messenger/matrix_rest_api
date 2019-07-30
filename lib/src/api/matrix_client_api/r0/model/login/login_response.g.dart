@@ -11,8 +11,10 @@ LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
       access_token: json['access_token'] as String,
       user_id: json['user_id'] as String,
       device_id: json['device_id'] as String,
-      well_known:
-          WellKnownClient.fromJson(json['well_known'] as Map<String, dynamic>));
+      well_known: json['well_known'] == null
+          ? null
+          : WellKnownClient.fromJson(
+              json['well_known'] as Map<String, dynamic>));
 }
 
 Map<String, dynamic> _$LoginResponseToJson(LoginResponse instance) =>
