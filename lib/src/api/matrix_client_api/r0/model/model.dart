@@ -31,6 +31,8 @@ export 'event/content/m_room/message/content/generic/generic_message.dart';
 export 'event/content/m_room/message/content/m_text/text_message.dart';
 export 'event/content/m_room/message/content/m_emote/emote_message.dart';
 export 'event/content/m_room/message/content/m_image/image_info.dart';
+export 'event/content/m_room/message/content/m_video/video_info.dart';
+export 'event/content/m_room/message/content/m_video/video_message.dart';
 export 'event/content/m_room/message/content/m_image/thumbnail_info.dart';
 export 'event/content/m_room/message/content/m_image/image_message.dart';
 export 'event/content/m_room/message/content/m_file/file_message.dart';
