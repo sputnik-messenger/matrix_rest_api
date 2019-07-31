@@ -8,7 +8,15 @@ class MatrixErrorConverter extends ErrorConverter {
   @override
   FutureOr<Response<MatrixError>> convertError<BodyType, InnerType>(
       Response response) {
-    final converted = MatrixError.fromJson(jsonDecode(response.bodyString));
-    return Response(response.base, converted);
+    MatrixError error;
+    try {
+      final json = jsonDecode(response.bodyString);
+      if (json is Map<String, dynamic> ) {
+        error = MatrixError.fromJson(json);
+      }
+    } on FormatException catch(e) {
+      error = null;
+    }
+    return Response(response.base, error);
   }
 }

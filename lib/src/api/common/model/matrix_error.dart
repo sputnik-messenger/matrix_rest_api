@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'matrix_error.g.dart';
 
-@JsonSerializable(nullable: false)
+@JsonSerializable(nullable: true)
 class MatrixError implements Exception {
   final String errcode;
   final String error;
