@@ -7,8 +7,12 @@ part of 'put_event_response.dart';
 // **************************************************************************
 
 PutEventResponse _$PutEventResponseFromJson(Map<String, dynamic> json) {
-  return PutEventResponse(event_id: json['event_id'] as String);
+  return PutEventResponse(
+    event_id: json['event_id'] as String,
+  );
 }
 
 Map<String, dynamic> _$PutEventResponseToJson(PutEventResponse instance) =>
-    <String, dynamic>{'event_id': instance.event_id};
+    <String, dynamic>{
+      'event_id': instance.event_id,
+    };

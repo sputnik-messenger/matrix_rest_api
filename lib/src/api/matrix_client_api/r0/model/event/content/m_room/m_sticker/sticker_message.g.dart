@@ -9,9 +9,10 @@ part of 'sticker_message.dart';
 StickerMessageContent _$StickerMessageContentFromJson(
     Map<String, dynamic> json) {
   return StickerMessageContent(
-      body: json['body'] as String,
-      info: ImageInfo.fromJson(json['info'] as Map<String, dynamic>),
-      url: json['url'] as String);
+    body: json['body'] as String,
+    info: ImageInfo.fromJson(json['info'] as Map<String, dynamic>),
+    url: json['url'] as String,
+  );
 }
 
 Map<String, dynamic> _$StickerMessageContentToJson(
@@ -19,5 +20,5 @@ Map<String, dynamic> _$StickerMessageContentToJson(
     <String, dynamic>{
       'body': instance.body,
       'info': instance.info,
-      'url': instance.url
+      'url': instance.url,
     };

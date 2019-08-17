@@ -7,8 +7,12 @@ part of 'device_list.dart';
 // **************************************************************************
 
 DeviceList _$DeviceListFromJson(Map<String, dynamic> json) {
-  return DeviceList(field: json['field'] as String);
+  return DeviceList(
+    field: json['field'] as String,
+  );
 }
 
 Map<String, dynamic> _$DeviceListToJson(DeviceList instance) =>
-    <String, dynamic>{'field': instance.field};
+    <String, dynamic>{
+      'field': instance.field,
+    };

@@ -8,11 +8,13 @@ part of 'state.dart';
 
 State _$StateFromJson(Map<String, dynamic> json) {
   return State(
-      events: (json['events'] as List)
-          ?.map((e) =>
-              e == null ? null : RoomEvent.fromJson(e as Map<String, dynamic>))
-          ?.toList());
+    events: (json['events'] as List)
+        ?.map((e) =>
+            e == null ? null : RoomEvent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
 }
 
-Map<String, dynamic> _$StateToJson(State instance) =>
-    <String, dynamic>{'events': instance.events};
+Map<String, dynamic> _$StateToJson(State instance) => <String, dynamic>{
+      'events': instance.events,
+    };

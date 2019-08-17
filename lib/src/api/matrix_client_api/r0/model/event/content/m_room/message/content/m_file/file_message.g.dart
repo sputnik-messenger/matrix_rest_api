@@ -8,13 +8,14 @@ part of 'file_message.dart';
 
 FileMessage _$FileMessageFromJson(Map<String, dynamic> json) {
   return FileMessage(
-      body: json['body'] as String,
-      filename: json['filename'] as String,
-      info: json['info'] == null
-          ? null
-          : FileInfo.fromJson(json['info'] as Map<String, dynamic>),
-      msgtype: json['msgtype'] as String,
-      url: json['url'] as String);
+    body: json['body'] as String,
+    filename: json['filename'] as String,
+    info: json['info'] == null
+        ? null
+        : FileInfo.fromJson(json['info'] as Map<String, dynamic>),
+    msgtype: json['msgtype'] as String,
+    url: json['url'] as String,
+  );
 }
 
 Map<String, dynamic> _$FileMessageToJson(FileMessage instance) {

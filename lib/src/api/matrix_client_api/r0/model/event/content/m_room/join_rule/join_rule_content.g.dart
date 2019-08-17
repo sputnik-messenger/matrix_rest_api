@@ -8,11 +8,14 @@ part of 'join_rule_content.dart';
 
 JoinRuleContent _$JoinRuleContentFromJson(Map<String, dynamic> json) {
   return JoinRuleContent(
-      join_rule: _$enumDecode(_$JoinRuleEnumMap, json['join_rule']));
+    join_rule: _$enumDecode(_$JoinRuleEnumMap, json['join_rule']),
+  );
 }
 
 Map<String, dynamic> _$JoinRuleContentToJson(JoinRuleContent instance) =>
-    <String, dynamic>{'join_rule': _$JoinRuleEnumMap[instance.join_rule]};
+    <String, dynamic>{
+      'join_rule': _$JoinRuleEnumMap[instance.join_rule],
+    };
 
 T _$enumDecode<T>(Map<T, dynamic> enumValues, dynamic source) {
   if (source == null) {

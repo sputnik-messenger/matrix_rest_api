@@ -8,12 +8,13 @@ part of 'relates_to.dart';
 
 RelatesTo _$RelatesToFromJson(Map<String, dynamic> json) {
   return RelatesTo(
-      rel_type: json['rel_type'] as String,
-      event_id: json['event_id'] as String,
-      in_reply_to: json['m.in_reply_to'] == null
-          ? null
-          : InReplyTo.fromJson(json['m.in_reply_to'] as Map<String, dynamic>),
-      key: json['key'] as String);
+    rel_type: json['rel_type'] as String,
+    event_id: json['event_id'] as String,
+    in_reply_to: json['m.in_reply_to'] == null
+        ? null
+        : InReplyTo.fromJson(json['m.in_reply_to'] as Map<String, dynamic>),
+    key: json['key'] as String,
+  );
 }
 
 Map<String, dynamic> _$RelatesToToJson(RelatesTo instance) {

@@ -9,13 +9,14 @@ part of 'identity_lookup_response.dart';
 IdentityLookupResponse _$IdentityLookupResponseFromJson(
     Map<String, dynamic> json) {
   return IdentityLookupResponse(
-      signatures: json['signatures'] as Map<String, dynamic>,
-      not_after: json['not_after'] as int,
-      ts: json['ts'] as int,
-      medium: json['medium'] as String,
-      address: json['address'] as String,
-      mxid: json['mxid'] as String,
-      not_before: json['not_before'] as int);
+    signatures: json['signatures'] as Map<String, dynamic>,
+    not_after: json['not_after'] as int,
+    ts: json['ts'] as int,
+    medium: json['medium'] as String,
+    address: json['address'] as String,
+    mxid: json['mxid'] as String,
+    not_before: json['not_before'] as int,
+  );
 }
 
 Map<String, dynamic> _$IdentityLookupResponseToJson(
@@ -27,5 +28,5 @@ Map<String, dynamic> _$IdentityLookupResponseToJson(
       'medium': instance.medium,
       'address': instance.address,
       'mxid': instance.mxid,
-      'not_before': instance.not_before
+      'not_before': instance.not_before,
     };

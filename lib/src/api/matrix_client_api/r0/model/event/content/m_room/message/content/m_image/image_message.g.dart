@@ -8,12 +8,13 @@ part of 'image_message.dart';
 
 ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) {
   return ImageMessage(
-      body: json['body'] as String,
-      info: json['info'] == null
-          ? null
-          : ImageInfo.fromJson(json['info'] as Map<String, dynamic>),
-      msgtype: json['msgtype'] as String,
-      url: json['url'] as String);
+    body: json['body'] as String,
+    info: json['info'] == null
+        ? null
+        : ImageInfo.fromJson(json['info'] as Map<String, dynamic>),
+    msgtype: json['msgtype'] as String,
+    url: json['url'] as String,
+  );
 }
 
 Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) =>
@@ -21,5 +22,5 @@ Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) =>
       'body': instance.body,
       'info': instance.info,
       'msgtype': instance.msgtype,
-      'url': instance.url
+      'url': instance.url,
     };

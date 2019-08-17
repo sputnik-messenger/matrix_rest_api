@@ -7,8 +7,12 @@ part of 'name_content.dart';
 // **************************************************************************
 
 NameContent _$NameContentFromJson(Map<String, dynamic> json) {
-  return NameContent(name: json['name'] as String);
+  return NameContent(
+    name: json['name'] as String,
+  );
 }
 
 Map<String, dynamic> _$NameContentToJson(NameContent instance) =>
-    <String, dynamic>{'name': instance.name};
+    <String, dynamic>{
+      'name': instance.name,
+    };

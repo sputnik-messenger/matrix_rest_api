@@ -8,10 +8,11 @@ part of 'emote_message.dart';
 
 EmoteMessage _$EmoteMessageFromJson(Map<String, dynamic> json) {
   return EmoteMessage(
-      body: json['body'] as String,
-      format: json['format'] as String,
-      formatted_body: json['formatted_body'] as String,
-      msgtype: json['msgtype'] as String);
+    body: json['body'] as String,
+    format: json['format'] as String,
+    formatted_body: json['formatted_body'] as String,
+    msgtype: json['msgtype'] as String,
+  );
 }
 
 Map<String, dynamic> _$EmoteMessageToJson(EmoteMessage instance) =>
@@ -19,5 +20,5 @@ Map<String, dynamic> _$EmoteMessageToJson(EmoteMessage instance) =>
       'body': instance.body,
       'format': instance.format,
       'formatted_body': instance.formatted_body,
-      'msgtype': instance.msgtype
+      'msgtype': instance.msgtype,
     };

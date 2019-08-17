@@ -7,8 +7,12 @@ part of 'redaction_content.dart';
 // **************************************************************************
 
 RedactionContent _$RedactionContentFromJson(Map<String, dynamic> json) {
-  return RedactionContent(reason: json['reason'] as String);
+  return RedactionContent(
+    reason: json['reason'] as String,
+  );
 }
 
 Map<String, dynamic> _$RedactionContentToJson(RedactionContent instance) =>
-    <String, dynamic>{'reason': instance.reason};
+    <String, dynamic>{
+      'reason': instance.reason,
+    };

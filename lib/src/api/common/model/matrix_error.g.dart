@@ -8,8 +8,13 @@ part of 'matrix_error.dart';
 
 MatrixError _$MatrixErrorFromJson(Map<String, dynamic> json) {
   return MatrixError(
-      errcode: json['errcode'] as String, error: json['error'] as String);
+    errcode: json['errcode'] as String,
+    error: json['error'] as String,
+  );
 }
 
 Map<String, dynamic> _$MatrixErrorToJson(MatrixError instance) =>
-    <String, dynamic>{'errcode': instance.errcode, 'error': instance.error};
+    <String, dynamic>{
+      'errcode': instance.errcode,
+      'error': instance.error,
+    };

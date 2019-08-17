@@ -8,9 +8,13 @@ part of 'canonical_alias_content.dart';
 
 CanonicalAliasContent _$CanonicalAliasContentFromJson(
     Map<String, dynamic> json) {
-  return CanonicalAliasContent(alias: json['alias'] as String);
+  return CanonicalAliasContent(
+    alias: json['alias'] as String,
+  );
 }
 
 Map<String, dynamic> _$CanonicalAliasContentToJson(
         CanonicalAliasContent instance) =>
-    <String, dynamic>{'alias': instance.alias};
+    <String, dynamic>{
+      'alias': instance.alias,
+    };

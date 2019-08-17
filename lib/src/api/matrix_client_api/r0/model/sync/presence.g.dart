@@ -8,11 +8,13 @@ part of 'presence.dart';
 
 Presence _$PresenceFromJson(Map<String, dynamic> json) {
   return Presence(
-      events: (json['events'] as List)
-          ?.map((e) =>
-              e == null ? null : Event.fromJson(e as Map<String, dynamic>))
-          ?.toList());
+    events: (json['events'] as List)
+        ?.map(
+            (e) => e == null ? null : Event.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
 }
 
-Map<String, dynamic> _$PresenceToJson(Presence instance) =>
-    <String, dynamic>{'events': instance.events};
+Map<String, dynamic> _$PresenceToJson(Presence instance) => <String, dynamic>{
+      'events': instance.events,
+    };

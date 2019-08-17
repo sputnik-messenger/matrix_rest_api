@@ -58,4 +58,7 @@ abstract class MatrixClientService extends ChopperService {
     @Path() String transactionId,
     @Body() RedactRequest request,
   );
+
+  @Post(path: 'r0/pushers/set')
+  Future<Response> setPusher(@Body() SetPusherRequest setPusherRequest);
 }

@@ -8,23 +8,23 @@ part of 'power_levels.dart';
 
 PowerLevels _$PowerLevelsFromJson(Map<String, dynamic> json) {
   return PowerLevels(
-      ban: json['ban'] as int,
-      events: (json['events'] as Map<String, dynamic>)?.map(
-        (k, e) => MapEntry(k, e as int),
-      ),
-      events_default: json['events_default'] as int,
-      invite: json['invite'] as int,
-      kick: json['kick'] as int,
-      redact: json['redact'] as int,
-      state_default: json['state_default'] as int,
-      users: (json['users'] as Map<String, dynamic>)?.map(
-        (k, e) => MapEntry(k, e as int),
-      ),
-      users_default: json['users_default'] as int,
-      notifications: json['notifications'] == null
-          ? null
-          : Notifications.fromJson(
-              json['notifications'] as Map<String, dynamic>));
+    ban: json['ban'] as int,
+    events: (json['events'] as Map<String, dynamic>)?.map(
+      (k, e) => MapEntry(k, e as int),
+    ),
+    events_default: json['events_default'] as int,
+    invite: json['invite'] as int,
+    kick: json['kick'] as int,
+    redact: json['redact'] as int,
+    state_default: json['state_default'] as int,
+    users: (json['users'] as Map<String, dynamic>)?.map(
+      (k, e) => MapEntry(k, e as int),
+    ),
+    users_default: json['users_default'] as int,
+    notifications: json['notifications'] == null
+        ? null
+        : Notifications.fromJson(json['notifications'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$PowerLevelsToJson(PowerLevels instance) =>
@@ -38,5 +38,5 @@ Map<String, dynamic> _$PowerLevelsToJson(PowerLevels instance) =>
       'state_default': instance.state_default,
       'users': instance.users,
       'users_default': instance.users_default,
-      'notifications': instance.notifications
+      'notifications': instance.notifications,
     };

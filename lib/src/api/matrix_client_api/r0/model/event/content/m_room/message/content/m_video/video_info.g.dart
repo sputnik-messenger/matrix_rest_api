@@ -8,14 +8,15 @@ part of 'video_info.dart';
 
 VideoInfo _$VideoInfoFromJson(Map<String, dynamic> json) {
   return VideoInfo(
-      duration: json['duration'] as num,
-      h: json['h'] as num,
-      w: json['w'] as num,
-      mimetype: json['mimetype'] as String,
-      size: json['size'] as num,
-      thumbnail_url: json['thumbnail_url'] as String,
-      thumbnail_info: ThumbnailInfo.fromJson(
-          json['thumbnail_info'] as Map<String, dynamic>));
+    duration: json['duration'] as num,
+    h: json['h'] as num,
+    w: json['w'] as num,
+    mimetype: json['mimetype'] as String,
+    size: json['size'] as num,
+    thumbnail_url: json['thumbnail_url'] as String,
+    thumbnail_info:
+        ThumbnailInfo.fromJson(json['thumbnail_info'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$VideoInfoToJson(VideoInfo instance) => <String, dynamic>{
@@ -25,5 +26,5 @@ Map<String, dynamic> _$VideoInfoToJson(VideoInfo instance) => <String, dynamic>{
       'mimetype': instance.mimetype,
       'size': instance.size,
       'thumbnail_url': instance.thumbnail_url,
-      'thumbnail_info': instance.thumbnail_info
+      'thumbnail_info': instance.thumbnail_info,
     };

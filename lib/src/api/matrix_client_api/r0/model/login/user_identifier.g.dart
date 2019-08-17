@@ -7,19 +7,26 @@ part of 'user_identifier.dart';
 // **************************************************************************
 
 MatrixUserIdentifier _$MatrixUserIdentifierFromJson(Map<String, dynamic> json) {
-  return MatrixUserIdentifier(json['user'] as String,
-      type: json['type'] as String);
+  return MatrixUserIdentifier(
+    json['user'] as String,
+    type: json['type'] as String,
+  );
 }
 
 Map<String, dynamic> _$MatrixUserIdentifierToJson(
         MatrixUserIdentifier instance) =>
-    <String, dynamic>{'type': instance.type, 'user': instance.user};
+    <String, dynamic>{
+      'type': instance.type,
+      'user': instance.user,
+    };
 
 ThirdPartyUserIdentifier _$ThirdPartyUserIdentifierFromJson(
     Map<String, dynamic> json) {
   return ThirdPartyUserIdentifier(
-      json['medium'] as String, json['address'] as String,
-      type: json['type'] as String);
+    json['medium'] as String,
+    json['address'] as String,
+    type: json['type'] as String,
+  );
 }
 
 Map<String, dynamic> _$ThirdPartyUserIdentifierToJson(
@@ -27,12 +34,15 @@ Map<String, dynamic> _$ThirdPartyUserIdentifierToJson(
     <String, dynamic>{
       'type': instance.type,
       'medium': instance.medium,
-      'address': instance.address
+      'address': instance.address,
     };
 
 PhoneUserIdentifier _$PhoneUserIdentifierFromJson(Map<String, dynamic> json) {
-  return PhoneUserIdentifier(json['country'] as String, json['phone'] as String,
-      type: json['type'] as String);
+  return PhoneUserIdentifier(
+    json['country'] as String,
+    json['phone'] as String,
+    type: json['type'] as String,
+  );
 }
 
 Map<String, dynamic> _$PhoneUserIdentifierToJson(
@@ -40,5 +50,5 @@ Map<String, dynamic> _$PhoneUserIdentifierToJson(
     <String, dynamic>{
       'type': instance.type,
       'country': instance.country,
-      'phone': instance.phone
+      'phone': instance.phone,
     };

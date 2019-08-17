@@ -87,4 +87,11 @@ class _$MatrixClientService extends MatrixClientService {
     final $request = Request('PUT', $url, client.baseUrl, body: $body);
     return client.send<PutEventResponse, PutEventResponse>($request);
   }
+
+  Future<Response> setPusher(SetPusherRequest setPusherRequest) {
+    final $url = '_matrix/client/r0/pushers/set';
+    final $body = setPusherRequest;
+    final $request = Request('POST', $url, client.baseUrl, body: $body);
+    return client.send<dynamic, dynamic>($request);
+  }
 }

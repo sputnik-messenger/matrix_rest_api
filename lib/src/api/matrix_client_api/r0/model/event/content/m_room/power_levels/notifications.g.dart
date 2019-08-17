@@ -7,8 +7,12 @@ part of 'notifications.dart';
 // **************************************************************************
 
 Notifications _$NotificationsFromJson(Map<String, dynamic> json) {
-  return Notifications(room: json['room'] as String);
+  return Notifications(
+    room: json['room'] as String,
+  );
 }
 
 Map<String, dynamic> _$NotificationsToJson(Notifications instance) =>
-    <String, dynamic>{'room': instance.room};
+    <String, dynamic>{
+      'room': instance.room,
+    };

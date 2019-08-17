@@ -7,8 +7,12 @@ part of 'guest_access_content.dart';
 // **************************************************************************
 
 GuestAccessContent _$GuestAccessContentFromJson(Map<String, dynamic> json) {
-  return GuestAccessContent(guest_access: json['guest_access'] as String);
+  return GuestAccessContent(
+    guest_access: json['guest_access'] as String,
+  );
 }
 
 Map<String, dynamic> _$GuestAccessContentToJson(GuestAccessContent instance) =>
-    <String, dynamic>{'guest_access': instance.guest_access};
+    <String, dynamic>{
+      'guest_access': instance.guest_access,
+    };

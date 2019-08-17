@@ -8,13 +8,14 @@ part of 'audio_info.dart';
 
 AudioInfo _$AudioInfoFromJson(Map<String, dynamic> json) {
   return AudioInfo(
-      duration: json['duration'] as int,
-      mimetype: json['mimetype'] as String,
-      size: json['size'] as int);
+    duration: json['duration'] as int,
+    mimetype: json['mimetype'] as String,
+    size: json['size'] as int,
+  );
 }
 
 Map<String, dynamic> _$AudioInfoToJson(AudioInfo instance) => <String, dynamic>{
       'duration': instance.duration,
       'mimetype': instance.mimetype,
-      'size': instance.size
+      'size': instance.size,
     };

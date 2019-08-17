@@ -63,3 +63,5 @@ export 'sync/state.dart';
 export 'server_discovery/base_url.dart';
 export 'server_discovery/well_known_client.dart';
 export 'supported_login_flows.dart';
+export 'pusher/set_pusher_request.dart';
+export 'pusher/pusher_data.dart';

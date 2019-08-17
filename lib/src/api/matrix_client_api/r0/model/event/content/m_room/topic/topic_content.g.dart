@@ -7,8 +7,12 @@ part of 'topic_content.dart';
 // **************************************************************************
 
 TopicContent _$TopicContentFromJson(Map<String, dynamic> json) {
-  return TopicContent(topic: json['topic'] as String);
+  return TopicContent(
+    topic: json['topic'] as String,
+  );
 }
 
 Map<String, dynamic> _$TopicContentToJson(TopicContent instance) =>
-    <String, dynamic>{'topic': instance.topic};
+    <String, dynamic>{
+      'topic': instance.topic,
+    };

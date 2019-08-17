@@ -8,15 +8,16 @@ part of 'member_content.dart';
 
 MemberContent _$MemberContentFromJson(Map<String, dynamic> json) {
   return MemberContent(
-      avatar_url: json['avatar_url'] as String,
-      displayname: json['displayname'] as String,
-      membership: _$enumDecodeNullable(_$MembershipEnumMap, json['membership']),
-      is_direct: json['is_direct'] as bool,
-      third_patry_invite: json['third_patry_invite'] == null
-          ? null
-          : Invite.fromJson(json['third_patry_invite'] as Map<String, dynamic>),
-      reason: json['reason'] as String,
-      unsigned: json['unsigned'] as Map<String, dynamic>);
+    avatar_url: json['avatar_url'] as String,
+    displayname: json['displayname'] as String,
+    membership: _$enumDecodeNullable(_$MembershipEnumMap, json['membership']),
+    is_direct: json['is_direct'] as bool,
+    third_patry_invite: json['third_patry_invite'] == null
+        ? null
+        : Invite.fromJson(json['third_patry_invite'] as Map<String, dynamic>),
+    reason: json['reason'] as String,
+    unsigned: json['unsigned'] as Map<String, dynamic>,
+  );
 }
 
 Map<String, dynamic> _$MemberContentToJson(MemberContent instance) =>
@@ -27,7 +28,7 @@ Map<String, dynamic> _$MemberContentToJson(MemberContent instance) =>
       'is_direct': instance.is_direct,
       'third_patry_invite': instance.third_patry_invite,
       'reason': instance.reason,
-      'unsigned': instance.unsigned
+      'unsigned': instance.unsigned,
     };
 
 T _$enumDecode<T>(Map<T, dynamic> enumValues, dynamic source) {

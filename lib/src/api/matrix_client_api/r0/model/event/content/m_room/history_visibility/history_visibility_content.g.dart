@@ -9,9 +9,12 @@ part of 'history_visibility_content.dart';
 HistoryVisibilityContent _$HistoryVisibilityContentFromJson(
     Map<String, dynamic> json) {
   return HistoryVisibilityContent(
-      history_visibility: json['history_visibility'] as String);
+    history_visibility: json['history_visibility'] as String,
+  );
 }
 
 Map<String, dynamic> _$HistoryVisibilityContentToJson(
         HistoryVisibilityContent instance) =>
-    <String, dynamic>{'history_visibility': instance.history_visibility};
+    <String, dynamic>{
+      'history_visibility': instance.history_visibility,
+    };

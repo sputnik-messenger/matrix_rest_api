@@ -8,12 +8,13 @@ part of 'audio_message.dart';
 
 AudioMessage _$AudioMessageFromJson(Map<String, dynamic> json) {
   return AudioMessage(
-      body: json['body'] as String,
-      info: json['info'] == null
-          ? null
-          : AudioInfo.fromJson(json['info'] as Map<String, dynamic>),
-      msgtype: json['msgtype'] as String,
-      url: json['url'] as String);
+    body: json['body'] as String,
+    info: json['info'] == null
+        ? null
+        : AudioInfo.fromJson(json['info'] as Map<String, dynamic>),
+    msgtype: json['msgtype'] as String,
+    url: json['url'] as String,
+  );
 }
 
 Map<String, dynamic> _$AudioMessageToJson(AudioMessage instance) =>
@@ -21,5 +22,5 @@ Map<String, dynamic> _$AudioMessageToJson(AudioMessage instance) =>
       'body': instance.body,
       'info': instance.info,
       'msgtype': instance.msgtype,
-      'url': instance.url
+      'url': instance.url,
     };

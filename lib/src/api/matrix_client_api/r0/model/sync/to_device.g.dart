@@ -7,8 +7,11 @@ part of 'to_device.dart';
 // **************************************************************************
 
 ToDevice _$ToDeviceFromJson(Map<String, dynamic> json) {
-  return ToDevice(field: json['field'] as String);
+  return ToDevice(
+    field: json['field'] as String,
+  );
 }
 
-Map<String, dynamic> _$ToDeviceToJson(ToDevice instance) =>
-    <String, dynamic>{'field': instance.field};
+Map<String, dynamic> _$ToDeviceToJson(ToDevice instance) => <String, dynamic>{
+      'field': instance.field,
+    };

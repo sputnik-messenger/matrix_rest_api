@@ -8,12 +8,15 @@ part of 'invite_state.dart';
 
 InviteState _$InviteStateFromJson(Map<String, dynamic> json) {
   return InviteState(
-      events: (json['events'] as List)
-          ?.map((e) => e == null
-              ? null
-              : StrippedState.fromJson(e as Map<String, dynamic>))
-          ?.toList());
+    events: (json['events'] as List)
+        ?.map((e) => e == null
+            ? null
+            : StrippedState.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$InviteStateToJson(InviteState instance) =>
-    <String, dynamic>{'events': instance.events};
+    <String, dynamic>{
+      'events': instance.events,
+    };
